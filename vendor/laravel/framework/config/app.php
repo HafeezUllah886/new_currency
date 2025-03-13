@@ -88,17 +88,14 @@ return [
     'locale' => env('APP_LOCALE', 'en'),
 
     'domains' => [
-        'quetta-mart.test',
-        'yaseen-s.test',
-        'quettamart.diamondquetta.com',
-        'testyaseen.diamondquetta.com',
-        'yaseen.run',
+        'new_currency.test',
+        'yasir.diamondquetta.com',
     ],
 
     'databases' => [
         'qm',
-        'test',
-        'u788011464_quettamart'
+        'new_currency',
+        'u788011464_yasir'
     ],
 
     'files' =>

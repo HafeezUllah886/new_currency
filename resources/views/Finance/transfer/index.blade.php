@@ -70,7 +70,7 @@
                             <select name="from" id="from" required class="selectize">
                                 <option value=""></option>
                                 @foreach ($accounts as $account)
-                                    <option value="{{ $account->id }}">{{ $account->title }}</option>
+                                    <option value="{{ $account->id }}">{{ $account->title }} - {{ $account->type }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -79,7 +79,7 @@
                             <select name="to" id="to" required class="selectize">
                                 <option value=""></option>
                                 @foreach ($accounts as $account)
-                                    <option value="{{ $account->id }}">{{ $account->title }}</option>
+                                    <option value="{{ $account->id }}">{{ $account->title }} - {{$account->type}}</option>
                                 @endforeach
                             </select>
                         </div>

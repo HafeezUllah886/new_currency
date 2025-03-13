@@ -17,7 +17,7 @@ class TransferController extends Controller
     public function index()
     {
         $transfers = transfer::orderby('id', 'desc')->get();
-        $accounts = accounts::whereNotIn('id', [2,3])->get();
+        $accounts = accounts::all();
         return view('Finance.transfer.index', compact('transfers', 'accounts'));
     }
 
@@ -72,7 +72,7 @@ class TransferController extends Controller
                     'refID' => $ref
                 ]
             );
-            
+
             deposit_withdraw::create(
                 [
                     'accountID' => $request->to,
