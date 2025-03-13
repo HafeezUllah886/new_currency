@@ -136,14 +136,14 @@ function productStockValue($id)
 
 function projectNameAuth()
 {
-    return "Quetta Mart & Pharmacy";
+    return "Yasir Currency";
 }
 
 function projectNameHeader()
 {
-    return "Quetta Mart & Pharmacy";
+    return "Yasir Currency";
 }
 function projectNameShort()
 {
-    return "QMP";
+    return "YC";
 }

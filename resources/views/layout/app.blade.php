@@ -3,7 +3,7 @@
     data-sidebar-image="none" data-preloader="disable" data-theme="default" data-theme-colors="default">
 <head>
     <meta charset="utf-8" />
-    <title>Business Management System</title>
+    <title>Account Management System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Business Management System" name="description" />
     <meta content="Hafeez Ullah" name="author" />
@@ -69,12 +69,7 @@
 
                     <div class="d-flex align-items-center">
 
-                        <div class="ms-1 header-item d-none d-sm-flex">
-                            <a onclick="newWindow('{{ route('pos') }}')"
-                                class="btn btn-info btn-icon btn-topbar material-shadow-none text-white rounded-circle">
-                                POS
-                            </a>
-                        </div>
+                       
                         <div class="ms-1 header-item d-none d-sm-flex">
                             <button type="button"
                                 class="btn btn-icon btn-topbar material-shadow-none btn-ghost-secondary rounded-circle"
@@ -144,11 +139,11 @@
                         <div class="col-sm-6">
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> © BMS.
+                            </script> © AMS.
                         </div>
                         <div class="col-sm-6">
                             <div class="text-sm-end d-none d-sm-block">
-                                Design & Develop by Diamond Softwares
+                                <a href="https://wa.me/923163560803">Nexgen Pakistan</a>
                             </div>
                         </div>
                     </div>
@@ -177,15 +172,10 @@
         </div>
     </div>
 
-    <div class="customizer-setting d-none d-md-block">
-        <div class="btn-info rounded-pill shadow-lg btn btn-icon btn-lg p-2" data-bs-toggle="offcanvas"
-            data-bs-target="#theme-settings-offcanvas" aria-controls="theme-settings-offcanvas">
-            <i class='mdi mdi-spin mdi-cog-outline fs-22'></i>
-        </div>
-    </div>
+   
 
     <!-- Theme Settings -->
-    @include('layout.settings')
+  
 
     <!-- JAVASCRIPT -->
     <script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>

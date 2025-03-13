@@ -15,24 +15,16 @@ class accountSeeder extends Seeder
     {
         accounts::create(
             [
-                'title' => "Cash Account",
-                'type' => "Business",
-                'category' => "Cash"
+                'title' => "Test Account 1",
+                'type' => "PKR",
             ]
         );
 
         accounts::create(
             [
-                'title' => "Walk-In Customer",
-                'type' => "Customer",
+                'title' => "Test Account 2",
+                'type' => "Dollar",
                 
-            ]
-        );
-
-        accounts::create(
-            [
-                'title' => "Walk-In Vendor",
-                'type' => "Vendor",
             ]
         );
     }

@@ -29,35 +29,14 @@
                                         class="form-control">
                                 </div>
                             </div>
-
-                            <div class="col-12 mt-2 {{$account->type != "Business" ? "d-none" : ""}}"  id="catBox">
-                                <div class="form-group">
-                                    <label for="category">Category</label>
-                                    <select name="category" id="category" class="form-control">
-                                        <option value="Cash">Cash</option>
-                                        <option value="Bank">Bank</option>
-                                        <option value="Cheque">Cheque</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            @if ($account->type == 'Customer')
-                            <div class="col-6 mt-2 customer" >
+                          
+                            <div class="col-12 mt-2">
                                 <div class="form-group">
                                     <label for="contact">Contact #</label>
                                     <input type="text" name="contact" id="contact" value="{{ $account->contact }}"
                                         class="form-control">
                                 </div>
                             </div>
-                            <div class="col-6 mt-2 customer" >
-                                <div class="form-group">
-                                    <label for="address">Address</label>
-                                    <input type="text" name="address" id="address" value="{{ $account->address }}"
-                                        class="form-control">
-                                </div>
-                            </div>
-
-                            @endif
 
                             <div class="col-12 mt-3">
                                 <button type="submit" class="btn btn-secondary w-100">Update</button>

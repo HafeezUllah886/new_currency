@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('accountID')->constrained('accounts', 'id');
             $table->date('date');
-            $table->float('cr', 2)->default(0);
-            $table->float('db', 2)->default(0);
+            $table->float('cr')->default(0);
+            $table->float('db')->default(0);
             $table->text('notes');
             $table->bigInteger('refID');
             $table->timestamps();

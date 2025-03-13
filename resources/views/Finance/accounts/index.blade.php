@@ -11,13 +11,7 @@
                         <thead>
                             <th>#</th>
                             <th>Title</th>
-                            @if ($filter == 'Business')
-                                <th>Category</th>
-                            @endif
-                            @if ($filter != 'Business')
-                                <td>Contact</td>
-                                <td>Address</td>
-                            @endif
+                            <th>Contact</th>
                             <th>Current Balance</th>
                             <th>Action</th>
                         </thead>
@@ -26,13 +20,8 @@
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
                                     <td>{{ $account->title }}</td>
-                                    @if ($filter == 'Business')
-                                        <td>{{ $account->category }}</td>
-                                    @endif
-                                    @if ($filter != 'Business')
                                         <td>{{ $account->contact }}</td>
-                                        <td>{{ $account->address }}</td>
-                                    @endif
+                                        
                                     <td>{{ number_format(getAccountBalance($account->id)) }}</td>
                                     <td>
                                         <div class="dropdown">
@@ -51,7 +40,7 @@
                                                 <li>
                                                     <a class="dropdown-item" href="{{route('account.edit', $account->id)}}">
                                                         <i class="ri-pencil-fill align-bottom me-2 text-muted"></i>
-                                                        Edits
+                                                        Edit
                                                     </a>
                                                 </li>
 

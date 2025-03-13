@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\accounts;
+use App\Models\deposit_withdraw;
 use App\Models\transactions;
 use App\Models\transfer;
 use Illuminate\Http\Request;
@@ -58,8 +59,31 @@ class TransferController extends Controller
             );
             $fromAccount = $transfer->fromAccount->title;
             $toAccount = $transfer->toAccount->title;
-            createTransaction($request->from,$request->date, 0, $request->amount, "Transfered to $toAccount <br> $request->notes", $ref);
-            createTransaction($request->to, $request->date, $request->amount, 0, "Transfered from $fromAccount <br> $request->notes", $ref);
+            createTransaction($request->from,$request->date, 0, $request->amount, __('lang.Transfer') . " - ". $request->notes, $ref);
+            createTransaction($request->to, $request->date, $request->amount, 0, __('lang.Transfer') . " - ". $request->notes, $ref);
+
+            deposit_withdraw::create(
+                [
+                    'accountID' => $request->from,
+                    'date' => $request->date,
+                    'type' => "Withdraw",
+                    'amount' => $request->amount,
+                    'notes' => "Transfer - ". $request->notes,
+                    'refID' => $ref
+                ]
+            );
+            
+            deposit_withdraw::create(
+                [
+                    'accountID' => $request->to,
+                    'date' => $request->date,
+                    'type' => "Deposit",
+                    'amount' => $request->amount,
+                    'notes' => "Transfer - ". $request->notes,
+                    'refID' => $ref
+                ]
+            );
+
             DB::commit();
             return back()->with('success', "Transfered Successfully");
         }
@@ -103,6 +127,7 @@ class TransferController extends Controller
         {
             DB::beginTransaction();
             transfer::where('refID', $ref)->delete();
+            deposit_withdraw::where('refID', $ref)->delete();
             transactions::where('refID', $ref)->delete();
             DB::commit();
             session()->forget('confirmed_password');

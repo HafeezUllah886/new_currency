@@ -45,7 +45,7 @@
                                     <h1 class="text-white">{{projectNameAuth()}}</h1>
                                 </a>
                             </div>
-                            <p class="mt-3 fs-15 fw-medium">Business Managment System</p>
+                            <p class="mt-3 fs-15 fw-medium">Account Managment System</p>
                         </div>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                     <div class="col-lg-12">
                         <div class="text-center">
                             <p class="mb-0 text-muted">&copy;
-                                <script>document.write(new Date().getFullYear())</script> BMS. Crafted with <i class="mdi mdi-heart text-danger"></i> by Diamond Softwares
+                                <script>document.write(new Date().getFullYear())</script> AMS. Crafted with <i class="mdi mdi-heart text-danger"></i> by <a href="https://wa.me/923163560803">Nexgen Pakistan</a>
                             </p>
                         </div>
                     </div>

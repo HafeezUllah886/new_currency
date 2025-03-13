@@ -15,15 +15,10 @@ class ledgerReportController extends Controller
 
     public function data($from, $to , $type)
     {
-        if($type == "All")
-        {
-            $accounts = accounts::pluck('id');
-        }
-        else
-        {
-            $accounts = accounts::where('type', $type)->pluck('id');
-        }
-        $transactions = transactions::with('account')->whereIn('accountID', $accounts)->get();
+
+        $accounts = accounts::where('type', $type)->pluck('id');
+       
+        $transactions = transactions::with('account')->whereBetween('date', [$from, $to])->whereIn('accountID', $accounts)->get();
 
         return view('reports.ledger.details', compact('from', 'to', 'type', 'transactions'));
     }

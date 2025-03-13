@@ -15,9 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->string('type');
-            $table->string('category')->nullable();
             $table->string('contact')->nullable();
-            $table->string('address')->nullable();
             $table->timestamps();
         });
     }

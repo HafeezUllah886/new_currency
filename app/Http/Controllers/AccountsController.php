@@ -49,40 +49,14 @@ class AccountsController extends Controller
             DB::beginTransaction();
 
                 $ref = getRef();
-                if($request->type != "Business")
-                {
+               
                     $account = accounts::create(
                         [
                             'title' => $request->title,
                             'type' => $request->type,
-                            'category' => $request->category,
                             'contact' => $request->contact,
-                            'address' => $request->address,
                         ]
                     );
-                }
-                else
-                {
-                    $account = accounts::create(
-                        [
-                            'title' => $request->title,
-                            'type' => $request->type,
-                            'category' => $request->category
-                        ]
-                    );
-                }
-
-                if($request->initial > 0)
-                {
-                    if($request->initialType == '0')
-                    {
-                        createTransaction($account->id,now(), $request->initial,0, "Initial Amount", $ref);
-                    }
-                    else
-                    {
-                        createTransaction($account->id,now(), 0, $request->initial, "Initial Amount", $ref);
-                    }
-                }
            DB::commit();
            return back()->with('success', "Account Created Successfully");
         }
@@ -157,9 +131,7 @@ class AccountsController extends Controller
         $account = accounts::find($request->accountID)->update(
             [
                 'title' => $request->title,
-                'category' => $request->category,
                 'contact' => $request->contact ?? null,
-                'address' => $request->address ?? null,
             ]
         );
 

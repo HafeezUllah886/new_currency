@@ -13,15 +13,13 @@
                     </div>
                     <div class="form-group mt-2">
                         <label for="to">To</label>
-                                <input type="date" name="to" id="to" value="{{lastDayOfMonth()}}" class="form-control">
+                                <input type="date" name="to" id="to" value="{{date("Y-m-d")}}" class="form-control">
                     </div>
                     <div class="form-group mt-2">
                         <label for="type">Type</label>
                                 <select name="type" id="type" class="form-control">
-                                    <option value="All">All Accounts</option>
-                                    <option value="Business">Business Accounts</option>
-                                    <option value="Customer">Customer Accounts</option>
-                                    <option value="Vendor">Vendor Accounts</option>
+                                    <option value="PKR">PKR Accounts</option>
+                                    <option value="Dollar">Dollar Accounts</option>
                                 </select>
                     </div>
 
