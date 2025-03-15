@@ -103,8 +103,8 @@
                                 <div class="card-body">
                                     <table class="table">
                                         <thead>
-                                            <th>Total Credit</th>
-                                            <th>Total Debit</th>
+                                            <th>Total Take</th>
+                                            <th>Total Give</th>
                                             <th>Balance</th>
                                         </thead>
                                         <tbody>

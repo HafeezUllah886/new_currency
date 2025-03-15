@@ -36,11 +36,11 @@
                             <div class="row mb-2 g-1">
                                 <div class="col-6">
                                     <input type="radio" class="btn-check d-none" name="type" value="Deposit" id="success-outlined" autocomplete="off" checked>
-                                <label class="btn btn-outline-success w-100" for="success-outlined">Deposit</label>
+                                <label class="btn btn-outline-success w-100" for="success-outlined">Take</label>
                                 </div>
                                 <div class="col-6">
                                     <input type="radio" class="btn-check d-none" name="type" value="Withdraw" id="danger-outlined" autocomplete="off">
-                                <label class="btn btn-outline-danger w-100" for="danger-outlined">Withdraw</label>
+                                <label class="btn btn-outline-danger w-100" for="danger-outlined">Give</label>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +64,7 @@
                             <div class="row mb-2 g-0">
                                 <label for="inputEmail3" class="col-sm-1 col-form-label">Notes</label>
                                 <div class="col-sm-11">
-                                 <input type="text" class="form-control" name="notes" id="notes">
+                                 <input type="text" class="form-control" name="notes" required id="notes">
                                 </div>
                             </div>
                         </div>
@@ -82,7 +82,7 @@
                 </form>
                     <div class="row mt-2">
                         <div class="col-md-6">
-                            <div class="card-header pt-0 pb-0 bg-light"><h5>Deposit | PKR <span id="total_deposit"></span> | Dollar <span id="total_dollar_deposit"></span></h5></div>
+                            <div class="card-header pt-0 pb-0 bg-light"><h5>Take | PKR <span id="total_deposit"></span> | Dollar <span id="total_dollar_deposit"></span></h5></div>
                             <div class="card-body" style="max-height: 320px; overflow-y: scroll;">
                                 <table class="table w-100 table-striped table-hover table-bordered">
                                     <thead>
@@ -100,7 +100,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="card-header pt-0 pb-0 bg-light"><h5>Withdraw | PKR <span id="total_withdraw"></span> | Dollar <span id="total_dollar_withdraw"></span></h5></div>
+                            <div class="card-header pt-0 pb-0 bg-light"><h5>Give | PKR <span id="total_withdraw"></span> | Dollar <span id="total_dollar_withdraw"></span></h5></div>
                             <div class="card-body" style="max-height: 320px; overflow-y: scroll;">
                                 <table class="table w-100 table-striped table-hover table-bordered">
                                     <thead>
@@ -195,8 +195,8 @@ style="display: none;">
                 <div class="form-group mt-2">
                     <label for="type">Type</label>
                     <select name="type" id="edit_type" class="form-control urdu form-control-sm">
-                        <option value="Deposit">Deposit</option>
-                        <option value="Withdraw">Withdraw</option>
+                        <option value="Deposit">Take</option>
+                        <option value="Withdraw">Give</option>
                     </select>
                 </div>
                 

@@ -59,8 +59,8 @@
                                                 <th scope="col" class="text-start p-1 m-1">Account</th>
                                                 <th scope="col" class="p-1 m-1">Date</th>
                                                 <th scope="col" class="text-start p-1 m-1">Notes</th>
-                                                <th scope="col" class="text-center text-success p-1 m-1">Deposit</th>
-                                                <th scope="col" class="text-center text-danger p-1 m-1">Withdraw</th>
+                                                <th scope="col" class="text-center text-success p-1 m-1">Take</th>
+                                                <th scope="col" class="text-center text-danger p-1 m-1">Give</th>
                                             </tr>
                                         </thead>
                                         <tbody >
@@ -88,7 +88,7 @@
                                                 <th class="text-center p-1 m-1">{{number_format($total_db, 2)}}</th>
                                             </tr>
                                             <tr>
-                                                <th colspan="5" class="text-end p-1 m-1">Depostit - Withdraw</th>
+                                                <th colspan="5" class="text-end p-1 m-1">Take - Give</th>
                                                 <th class="text-center p-1 m-1" colspan="2">{{number_format($balance, 2)}}</th>
                                             </tr>
                                             <tr>

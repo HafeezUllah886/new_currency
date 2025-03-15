@@ -62,8 +62,8 @@
                                                 <th scope="col" style="width: 50px;">Ref#</th>
                                                 <th scope="col">Date</th>
                                                 <th scope="col" class="text-start">Notes</th>
-                                                <th scope="col" class="text-end text-success">Credit</th>
-                                                <th scope="col" class="text-end text-danger">Debit</th>
+                                                <th scope="col" class="text-end text-success">Take</th>
+                                                <th scope="col" class="text-end text-danger">Give</th>
                                                 <th scope="col" class="text-end">Balance</th>
                                             </tr>
                                         </thead>
