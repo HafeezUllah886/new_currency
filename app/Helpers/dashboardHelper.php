@@ -48,14 +48,6 @@ function dashboard()
         abort(500, "Invalid Address");
     }
 
-    $files = config('app.files');
-    $file2 = filesize(public_path('assets/images/Header.png'));
-
-    if($files[1] != $file2)
-    {
-        abort(500, "Something Went Wrong!");
-    }
-
     $databases = config('app.databases');
     $current_db = DB::connection()->getDatabaseName();
     if (!in_array($current_db, $databases)) {

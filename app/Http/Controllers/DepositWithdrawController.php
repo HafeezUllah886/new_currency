@@ -85,6 +85,7 @@ class DepositWithdrawController extends Controller
                 'refID' => $deposit->refID
             ];
         }
+        dashboard();
         $pkr_accounts = accounts::where('type', 'PKR')->pluck('id')->toArray();
         $dollar_accounts = accounts::where('type', 'Dollar')->pluck('id')->toArray();
 
@@ -106,6 +107,7 @@ class DepositWithdrawController extends Controller
                 'refID' => $withdraw->refID
             ];
         }
+        dashboard();
 
         $pkr_accounts = accounts::where('type', 'PKR')->pluck('id')->toArray();
         $dollar_accounts = accounts::where('type', 'Dollar')->pluck('id')->toArray();
